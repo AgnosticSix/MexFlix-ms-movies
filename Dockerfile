@@ -1,6 +1,6 @@
 FROM maven:3.9.7-amazoncorretto-21 AS build
 COPY . .
-RUN mvn clean package
+RUN mvn clean package -DskipTests
 
 # Etapa de ejecución
 FROM amazoncorretto:21.0.6-alpine

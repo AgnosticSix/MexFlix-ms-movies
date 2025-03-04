@@ -5,5 +5,5 @@ RUN mvn clean package
 # Etapa de ejecución
 FROM amazoncorretto:21.0.6-alpine
 EXPOSE 8080
-COPY --from=build /target/ms-movies-0.0.1-SNAPSHOT.jar ms-movies-0.0.1-SNAPSHOT.jar
-ENTRYPOINT ["java", "-jar", "/ms-movies-0.0.1-SNAPSHOT.jar"]
+COPY --from=build /target/mexflix-ms-movies-0.0.1-SNAPSHOT.jar mexflix-ms-movies-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java", "-jar", "/mexflix-ms-movies-0.0.1-SNAPSHOT.jar"]

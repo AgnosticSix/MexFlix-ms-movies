@@ -3,12 +3,15 @@ package mx.equipo_g_1004.unir.mexflixmsmovies.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Data
 @Entity
-@Table(name = "movie")
-public class Movie {
+@Table(name = "movie", schema = "MexFlix")
+public class Movie implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
